@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public class CustomerEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -24,5 +24,8 @@ public class CustomerEntity {
 
     @Column(name = "monthly_income")
     private BigDecimal monthlyIncome;
+
+    @Version
+    private Long version;
 
 }

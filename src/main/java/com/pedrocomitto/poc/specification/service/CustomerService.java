@@ -33,7 +33,7 @@ public class CustomerService {
 
     private Specification<CustomerEntity> getSpecification(Boolean active, BigDecimal salaryCap) {
         return (Specification<CustomerEntity>) (root, query, criteriaBuilder) -> {
-            List<Predicate> predicates = new ArrayList<Predicate>();
+            List<Predicate> predicates = new ArrayList<>();
 
             if (active != null) {
                 predicates.add(isActive(active).toPredicate(root, query, criteriaBuilder));
