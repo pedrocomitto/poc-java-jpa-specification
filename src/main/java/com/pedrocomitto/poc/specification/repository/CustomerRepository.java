@@ -1,6 +1,6 @@
 package com.pedrocomitto.poc.specification.repository;
 
-import com.pedrocomitto.poc.specification.entity.CustomerEntity;
+import com.pedrocomitto.poc.specification.domain.entity.CustomerEntity;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -12,4 +12,5 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<CustomerEntity, Long>, JpaSpecificationExecutor<CustomerEntity> {
 
     List<CustomerEntity> findAll(Specification<CustomerEntity> specification);
+
 }

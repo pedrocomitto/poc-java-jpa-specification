@@ -1,6 +1,6 @@
 package com.pedrocomitto.poc.specification.resource;
 
-import com.pedrocomitto.poc.specification.entity.CustomerEntity;
+import com.pedrocomitto.poc.specification.domain.entity.CustomerEntity;
 import com.pedrocomitto.poc.specification.service.CustomerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 public class CustomerResource {
 
     private final CustomerService service;
@@ -25,4 +25,5 @@ public class CustomerResource {
                                           @RequestParam(value = "salaryCap", required = false) final BigDecimal salaryCap) {
         return service.findAllByCriteria(active, salaryCap);
     }
+
 }

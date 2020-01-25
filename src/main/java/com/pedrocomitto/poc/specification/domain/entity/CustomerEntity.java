@@ -1,4 +1,4 @@
-package com.pedrocomitto.poc.specification.entity;
+package com.pedrocomitto.poc.specification.domain.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

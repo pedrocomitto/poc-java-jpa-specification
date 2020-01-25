@@ -1,19 +1,17 @@
 package com.pedrocomitto.poc.specification.service;
 
-import com.pedrocomitto.poc.specification.entity.CustomerEntity;
+import com.pedrocomitto.poc.specification.domain.entity.CustomerEntity;
 import com.pedrocomitto.poc.specification.repository.CustomerRepository;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.pedrocomitto.poc.specification.specification.CustomerSpecification.*;
+import static com.pedrocomitto.poc.specification.specification.CustomerSpecification.isActive;
+import static com.pedrocomitto.poc.specification.specification.CustomerSpecification.isBelowSalaryCap;
 
 @Service
 public class CustomerService {
@@ -46,4 +44,5 @@ public class CustomerService {
             return criteriaBuilder.and(predicates.toArray(new Predicate[]{}));
         };
     }
+
 }

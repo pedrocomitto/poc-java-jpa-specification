@@ -1,6 +1,6 @@
 package com.pedrocomitto.poc.specification.specification;
 
-import com.pedrocomitto.poc.specification.entity.CustomerEntity;
+import com.pedrocomitto.poc.specification.domain.entity.CustomerEntity;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.math.BigDecimal;
